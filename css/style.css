@@ -11,4 +11,20 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  max-width: 1440px;
+  display: flex;
 }
+ul {list-style-type: none;
+  display: flex;
+	margin-top: 0;
+	margin-bottom: 0;
+	flex-wrap: wrap;
+	gap: 24px;
+  
+	}
+  img{display: block;
+    height: 200px;  
+    width: 360px;       
+    object-fit:cover;    
+  }
+  
