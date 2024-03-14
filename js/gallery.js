@@ -56,11 +56,14 @@ alt="${image.description}">
     .join("");
 setGallery.insertAdjacentHTML("beforeend", imgGallery);
 
-function handleModalOpen(event) {
-    if (event.currentTarget === event.targets) return;
 
-    const instance = basicLightbox.create(`<img src="${event.target.dataset.source}">
-    alt="${event.target.alt}"`);
+function handleModalOpen(event) {
+    if (event.currentTarget === event.target) return;
+    event.preventDefault();
+
+    const instance = basicLightbox.create(`<img src="${event.target.dataset.source}" alt="${event.target.alt}">
+    `);
 
     instance.show();
 }
+setGallery.addEventListener('click', handleModalOpen);
